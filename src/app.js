@@ -6,7 +6,7 @@ const forecast = require('./utils/forecast')
 ///Set-up express server
 const express = require("express");
 const app = express();
-
+const port = process.env.PORT || 3000;
 // console.log(__dirname);
 // console.log(path.join(__dirname, '../public'));
 
@@ -104,6 +104,6 @@ app.get('*', (req, res) => {
 });
 
 //Start the server
-app.listen(3000, () => {
-  console.log(`App listening at http://localhost:3000`);
+app.listen(port, () => {
+  console.log(`App listening at http://localhost:${port}`);
 });
